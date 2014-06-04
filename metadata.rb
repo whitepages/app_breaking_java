@@ -1,4 +1,4 @@
-name              "java"
+name              "app_breaking_java"
 maintainer        "Socrata, Inc."
 maintainer_email  "chefs@socrata.com"
 license           "Apache 2.0"

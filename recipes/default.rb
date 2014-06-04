@@ -1,6 +1,6 @@
 #
 # Author:: Seth Chisamore (<schisamo@opscode.com>)
-# Cookbook Name:: java
+# Cookbook Name:: app_breaking_java
 # Recipe:: default
 #
 # Copyright 2008-2011, Opscode, Inc.
@@ -24,5 +24,5 @@ if node['java']['install_flavor'] != 'windows'
   end
 end
 
-include_recipe "java::set_attributes_from_version"
-include_recipe "java::#{node['java']['install_flavor']}"
+include_recipe "app_breaking_java::set_attributes_from_version"
+include_recipe "app_breaking_java::#{node['java']['install_flavor']}"

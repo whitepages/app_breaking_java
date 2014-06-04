@@ -1,6 +1,6 @@
 # Author:: Christophe Arguel (<christophe.arguel@free.fr>)
 #
-# Cookbook Name:: java
+# Cookbook Name:: app_breaking_java
 # Recipe:: oracle_rpm
 #
 # Copyright 2013, Christophe Arguel <christophe.arguel@free.fr>
@@ -17,7 +17,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include_recipe 'java::set_java_home'
+include_recipe 'app_breaking_java::set_java_home'
 
 
 slave_cmds = case node['java']['oracle_rpm']['type']

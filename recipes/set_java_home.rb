@@ -1,5 +1,5 @@
 # Author:: Joshua Timberman (<joshua@opscode.com>)
-# Cookbook Name:: java
+# Cookbook Name:: app_breaking_java
 # Recipe:: set_java_home
 #
 # Copyright 2013, Opscode, Inc.

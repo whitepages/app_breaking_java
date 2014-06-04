@@ -1,6 +1,6 @@
 #
 # Author:: Bryan W. Berry (<bryan.berry@gmail.com>)
-# Cookbook Name:: java
+# Cookbook Name:: app_breaking_java
 # Recipe:: oracle
 #
 # Copyright 2011, Bryan w. Berry
@@ -22,7 +22,7 @@ unless node.recipe?('java::default')
 
 # Even if this recipe is included by itself, a safety check is nice...
   if node['java']['java_home'].nil? or node['java']['java_home'].empty?
-    include_recipe "java::set_attributes_from_version"
+    include_recipe "app_breaking_java::set_attributes_from_version"
   end
 end
 
@@ -48,7 +48,7 @@ if tarball_url =~ /example.com/
   Chef::Application.fatal!("You must change the download link to your private repository. You can no longer download java directly from http://download.oracle.com without a web broswer")
 end
 
-include_recipe "java::set_java_home"
+include_recipe "app_breaking_java::set_java_home"
 
 java_ark "jdk" do
   url tarball_url
@@ -63,5 +63,5 @@ java_ark "jdk" do
 end
 
 if node['java']['set_default'] and platform_family?('debian')
-  include_recipe 'java::default_java_symlink'
+  include_recipe 'app_breaking_java::default_java_symlink'
 end

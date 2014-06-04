@@ -1,5 +1,5 @@
 # Author:: Joshua Timberman (<joshua@opscode.com>)
-# Cookbook Name:: java
+# Cookbook Name:: app_breaking_java
 # Recipe:: ibm
 #
 # Copyright 2013, Opscode, Inc.
@@ -73,4 +73,4 @@ execute "install-ibm-java" do
   creates "#{node['java']['java_home']}/jre/bin/java"
 end
 
-include_recipe "java::set_java_home"
+include_recipe "app_breaking_java::set_java_home"

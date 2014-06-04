@@ -2,7 +2,7 @@
 # Author:: Seth Chisamore (<schisamo@opscode.com>)
 # Author:: Joshua Timberman (<joshua@opscode.com>)
 #
-# Cookbook Name:: java
+# Cookbook Name:: app_breaking_java
 # Recipe:: openjdk
 #
 # Copyright 2010-2013, Opscode, Inc.
@@ -25,7 +25,7 @@ unless node.recipe?('java::default')
   # Even if this recipe is included by itself, a safety check is nice...
   [ node['java']['openjdk_packages'], node['java']['java_home'] ].each do |v|
     if v.nil? or v.empty?
-      include_recipe "java::set_attributes_from_version"
+      include_recipe "app_breaking_java::set_attributes_from_version"
     end
   end
 end
@@ -62,9 +62,9 @@ if platform_family?('debian', 'rhel', 'fedora')
 end
 
 if node['java']['set_default'] and platform_family?('debian')
-  include_recipe 'java::default_java_symlink'
+  include_recipe 'app_breaking_java::default_java_symlink'
 end
 
 # We must include this recipe AFTER updating the alternatives or else JAVA_HOME
 # will not point to the correct java.
-include_recipe 'java::set_java_home'
+include_recipe 'app_breaking_java::set_java_home'

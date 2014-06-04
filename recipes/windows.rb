@@ -1,6 +1,6 @@
 #
 # Author:: Kendrick Martin (<kendrick.martin@webtrends.com>)
-# Cookbook Name:: java
+# Cookbook Name:: app_breaking_java
 # Recipe:: windows
 #
 # Copyright 2008-2012 Webtrends, Inc.

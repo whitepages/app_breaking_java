@@ -47,7 +47,7 @@ node['java']['openjdk_packages'].each do |pkg|
 end
 
 if platform_family?('debian', 'rhel', 'fedora')
-  java_alternatives 'set-java-alternatives' do
+  app_breaking_java_alternatives 'set-java-alternatives' do
     java_location jdk.java_home
     default node['java']['set_default']
     priority jdk.alternatives_priority

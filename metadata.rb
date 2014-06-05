@@ -4,7 +4,7 @@ maintainer_email  "chefs@socrata.com"
 license           "Apache 2.0"
 description       "Installs Java runtime."
 long_description  IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version           "1.22.2"
+version           "1.22.3"
 
 recipe "app_breaking_java::default", "Installs Java runtime"
 recipe "app_breaking_java::default_java_symlink", "Updates /usr/lib/jvm/default-java"
